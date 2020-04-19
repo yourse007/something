@@ -5,7 +5,7 @@ As the name of the projects, there will be something miscellaneous here,theoreti
 
 #### algorithm
 
-sort, search, and some solutions of problems from anywhere such as LeetCode.
+sort, search, and some solutions of problems from anywhere such as leetcode.
 
 #### data structure
 
@@ -14,4 +14,3 @@ some simple implements and encapsulation of common data structures.
 #### framework
 
 mainly use some frameworks related Java development.
-Collect some algorithm questions and solutions.
