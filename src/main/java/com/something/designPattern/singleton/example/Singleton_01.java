@@ -2,9 +2,9 @@ package com.something.designPattern.singleton.example;
 
 /**
  * 单例模式 - 饿汉式
- *
+ * <p>
  * 在类加载的时候就会初始化唯一的对象
- *
+ * <p>
  * 缺点：减慢程序启动速度，且该实例不一定会被用到（在企业应用中基本不存在这种情况）
  */
 public class Singleton_01 {
