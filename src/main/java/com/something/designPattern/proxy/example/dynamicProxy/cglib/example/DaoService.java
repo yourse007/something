@@ -14,7 +14,7 @@ public class DaoService {
         Thread.sleep(1000);
 
         // 模拟数据库操作中发生异常，会触发事务回滚
-         int i = 1 / 0;
+        int i = 1 / 0;
 
         System.out.println("dao finished insert id = " + id);
     }
