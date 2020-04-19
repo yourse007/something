@@ -1,9 +1,9 @@
-package com.algorithm.other.designPattern.decorator;
+package com.something.designPattern.decorator;
 
-import com.algorithm.other.designPattern.decorator.example.ChineseRichie;
-import com.algorithm.other.designPattern.decorator.example.EnglishRichie;
-import com.algorithm.other.designPattern.decorator.example.IRichie;
-import com.algorithm.other.designPattern.decorator.example.Richie;
+import com.something.designPattern.decorator.example.EnglishRichie;
+import com.something.designPattern.decorator.example.ChineseRichie;
+import com.something.designPattern.decorator.example.IRichie;
+import com.something.designPattern.decorator.example.Richie;
 
 import java.io.*;
 

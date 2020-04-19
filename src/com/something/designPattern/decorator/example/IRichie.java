@@ -1,4 +1,4 @@
-package com.algorithm.other.designPattern.decorator.example;
+package com.something.designPattern.decorator.example;
 
 /**
  * 基础接口 描述Richie的通用能力

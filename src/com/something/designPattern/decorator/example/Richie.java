@@ -1,4 +1,4 @@
-package com.algorithm.other.designPattern.decorator.example;
+package com.something.designPattern.decorator.example;
 
 /**
  * 基本实现 实现Richie的各项基本能力

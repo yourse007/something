@@ -1,4 +1,4 @@
-package com.algorithm.basic.search;
+package com.something.algorithm.basic.search;
 
 /**
  * 二分查找算法

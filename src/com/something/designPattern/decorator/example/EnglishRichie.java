@@ -1,4 +1,4 @@
-package com.algorithm.other.designPattern.decorator.example;
+package com.something.designPattern.decorator.example;
 
 /**
  * 具备英文能力的Richie

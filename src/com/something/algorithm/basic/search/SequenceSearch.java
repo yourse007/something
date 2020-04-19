@@ -1,4 +1,4 @@
-package com.algorithm.basic.search;
+package com.something.algorithm.basic.search;
 
 import java.util.Arrays;
 
