@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <p>
  * 时间复杂度：O(n2)
  */
-public class InsertSort {
+public class $03_InsertSort {
 
     /**
      * 插入排序

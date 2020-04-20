@@ -16,7 +16,7 @@ import java.util.Arrays;
  * 下面的实现方式，在每次的merge操作中都会新创建一个left+right长度的数组，空间复杂度为O(n2)，如何改进？
  * 是否可以在算法初始时，直接创建和原数组等长的新数组，在merge操作中不断填充这个新数组？这样改进之后空间复杂度可以降低为O(n)
  */
-public class MergeSort {
+public class $05_MergeSort {
 
     public static int[] mergeSort(int[] arr) {
         return mergeSort(arr, 0, arr.length - 1);

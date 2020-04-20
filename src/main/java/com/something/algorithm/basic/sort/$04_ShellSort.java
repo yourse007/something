@@ -24,9 +24,9 @@ import java.util.Arrays;
  * 分析：
  * 该算法的复杂度取决于对增量序列的分割，按照这种二分的方式在最坏情况下复杂度是O(n2)
  *
- * @see InsertSort
+ * @see $03_InsertSort
  */
-public class ShellSort {
+public class $04_ShellSort {
 
     public static void shellSort(int[] arr) {
         for (int inc = arr.length / 2; inc > 0; inc /= 2) {

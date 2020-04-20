@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <p>
  * 时间复杂度：O(n2)
  */
-public class SelectionSort {
+public class $02_SelectionSort {
 
     /**
      * 选择排序

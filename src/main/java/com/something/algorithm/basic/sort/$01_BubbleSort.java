@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <p>
  * 时间复杂度：O(n2)
  */
-public class BubbleSort {
+public class $01_BubbleSort {
 
     /**
      * 冒泡排序（正序）
