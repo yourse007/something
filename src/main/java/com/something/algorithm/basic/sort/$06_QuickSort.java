@@ -139,6 +139,12 @@ public class $06_QuickSort {
 
     /**
      * 交换给定数组left和right角标下的值
+     * <p>
+     * 使用异或操作实现交换a和b的值
+     * a = a^b
+     * b = a^b = a^b^b = a^(b^b) = a^0 = a
+     * a = a^b = a^b^a = a^a^b = 0^b = b
+     * 即： a=b; b=a
      *
      * @param arr
      * @param left
