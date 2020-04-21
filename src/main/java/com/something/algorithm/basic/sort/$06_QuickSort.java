@@ -1,5 +1,7 @@
 package com.something.algorithm.basic.sort;
 
+import com.something.algorithm.util.ArrayUtil;
+
 import java.util.Arrays;
 
 /**
@@ -161,8 +163,18 @@ public class $06_QuickSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {3, 22, -11, 53, 2521, 234};
-        quickSort(arr);
-        System.out.println(Arrays.toString(arr));
+//        int[] arr = {3, 22, -11, 53, 2521, 234};
+        for (int i = 0; i < 10000000; i++) {
+            int[] arr = ArrayUtil.generateRandomArray(10, -100, 100);
+            quickSort(arr);
+            boolean isOrdered = ArrayUtil.isOrdered(arr, true);
+            if (!isOrdered) {
+                System.err.println(i + " : " + Arrays.toString(arr));
+                break;
+            } else {
+                System.out.println(i + " : " + Arrays.toString(arr));
+            }
+        }
+
     }
 }
