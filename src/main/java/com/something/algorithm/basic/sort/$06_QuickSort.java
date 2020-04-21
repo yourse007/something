@@ -139,22 +139,18 @@ public class $06_QuickSort {
 
     /**
      * 交换给定数组left和right角标下的值
-     * 此处不能使用与操作的方式，因为上层调用此方法时，
-     * 可能存在left==right的情况，那么
-     * arr[left] = arr[left] ^ arr[right]
-     * arr[right] = arr[left] ^ arr[right]
-     * arr[left] = arr[left] ^ arr[right]
-     * 就由于arr[left]和arr[right]其实是同一个元素
-     * 而导致交换失败
      *
      * @param arr
      * @param left
      * @param right
      */
     private static void swap(int[] arr, int left, int right) {
-        int temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
+        if (left == right) {
+            return;
+        }
+        arr[left] = arr[left] ^ arr[right];
+        arr[right] = arr[left] ^ arr[right];
+        arr[left] = arr[left] ^ arr[right];
     }
 
 
