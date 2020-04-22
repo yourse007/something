@@ -68,6 +68,7 @@ public class $06_QuickSort {
             swap(arr, left, right);
         }
 
+        // 将基准值放入对应位置
         swap(arr, kindex, left);
         return left;
     }
