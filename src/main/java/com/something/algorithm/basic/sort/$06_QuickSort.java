@@ -165,7 +165,7 @@ public class $06_QuickSort {
     public static void main(String[] args) {
 //        int[] arr = {3, 22, -11, 53, 2521, 234};
         for (int i = 0; i < 10000000; i++) {
-            int[] arr = ArrayUtil.generateRandomArray(10, -100, 100);
+            int[] arr = ArrayUtil.generateRandomArray();
             quickSort(arr);
             boolean isOrdered = ArrayUtil.isOrdered(arr, true);
             if (!isOrdered) {

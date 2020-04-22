@@ -4,6 +4,20 @@ import java.util.function.Predicate;
 
 public class ArrayUtil {
 
+    private static final int DEFAULT_LENGTH = 10;
+
+    private static final int MIN_VALUE = -100;
+
+    private static final int MAX_VALUE = 100;
+
+    public static int[] generateRandomArray() {
+        return generateRandomArray(DEFAULT_LENGTH, MIN_VALUE, MAX_VALUE);
+    }
+
+    public static int[] generateRandomArray(int length) {
+        return generateRandomArray(length, MIN_VALUE, MAX_VALUE);
+    }
+
     /**
      * 生成随机数组
      *
