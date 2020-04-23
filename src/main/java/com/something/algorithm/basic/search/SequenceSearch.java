@@ -1,5 +1,8 @@
 package com.something.algorithm.basic.search;
 
+import com.something.algorithm.basic.sort.$06_QuickSort;
+import com.something.algorithm.util.ArrayUtil;
+
 import java.util.Arrays;
 
 /**
@@ -27,8 +30,16 @@ public class SequenceSearch {
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 13, 5, -20, 11, 31};
-        int target = 31;
-        System.out.println(sequenceSearch(arr, target));
+        // 生成一个随机数组
+        int length = 20;
+        int[] arr = ArrayUtil.generateRandomArray(length);
+        System.out.println("给定数组 ：" + Arrays.toString(arr));
+
+        // 随机给定一个数组的元素
+        int randomIndex = (int) (Math.random() * (length - 1));
+        int target = arr[randomIndex];
+        System.out.println("查找第 " + (randomIndex + 1) + " 个元素 ：" + target);
+
+        System.out.println("返回角标 ：" + sequenceSearch(arr, target));
     }
 }
