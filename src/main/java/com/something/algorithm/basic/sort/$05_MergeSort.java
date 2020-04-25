@@ -1,5 +1,7 @@
 package com.something.algorithm.basic.sort;
 
+import com.something.algorithm.util.ArrayUtil;
+
 import java.util.Arrays;
 
 /**
@@ -13,9 +15,14 @@ import java.util.Arrays;
  * <p>
  * 思考：
  * 算法在很多时候都是以空间来换取时间，在归并排序中也不例外。
- * 下面展示的代码实现中，在每次的merge操作中都会新创建一个right - left + 1长度的数组，空间复杂度为O(n2)，如何改进？
+ * 下面展示的代码实现中，在每次的merge操作中都会新创建一个right - left + 1长度的数组，空间复杂度为O(n * log n)，能否改进？
  */
 public class $05_MergeSort {
+
+    /**
+     * 记录额外空间消耗
+     */
+    private static int spaceCounter = 0;
 
     /**
      * 归并排序 - 递归方式
@@ -24,6 +31,8 @@ public class $05_MergeSort {
      * @return
      */
     public static void mergeSortRecursively(int[] arr) {
+        // reset extra space counter
+        spaceCounter = 0;
         mergeSort(arr, 0, arr.length - 1);
     }
 
@@ -42,6 +51,7 @@ public class $05_MergeSort {
 
     private static void merge(int[] arr, int left, int middle, int right) {
         int[] temp = new int[right - left + 1];
+        spaceCounter += temp.length;
         int leftIndex = left, rightIndex = middle + 1, mergeIndex = 0;
         while (leftIndex <= middle && rightIndex <= right) {
             // 依次比较左右数组的元素值，较小的值放入新的大数组中
@@ -68,6 +78,8 @@ public class $05_MergeSort {
      * @param arr
      */
     public static void mergeSortWithLoop(int[] arr) {
+        // reset extra space counter
+        spaceCounter = 0;
         int length = arr.length;
         // 非递归方式从最小单位开始合并
         int mergeSize = 1;
@@ -91,12 +103,18 @@ public class $05_MergeSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {3, 22, -11, 53, 2521, 234};
+        int[] arr = ArrayUtil.generateRandomArray(16);
+        System.out.println("给定随机数组：" + Arrays.toString(arr));
+        int[] arr1 = Arrays.copyOf(arr, arr.length);
+
+        System.out.println("递归方式的归并排序：------------------->");
         mergeSortRecursively(arr);
         System.out.println(Arrays.toString(arr));
+        System.out.println("额外空间消耗：" + spaceCounter);
 
-        int[] arr1 = {3, 22, -11, 53, 2521, 234};
+        System.out.println("循环方式的归并排序：------------------->");
         mergeSortWithLoop(arr1);
         System.out.println(Arrays.toString(arr1));
+        System.out.println("额外空间消耗：" + spaceCounter);
     }
 }
